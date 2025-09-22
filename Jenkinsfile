@@ -48,7 +48,9 @@
 
   post {
     always {
+     node('win'){
       archiveArtifacts artifacts: 'artifact.txt, out/**', allowEmptyArchive: false
+     }
     }
   }
 }
